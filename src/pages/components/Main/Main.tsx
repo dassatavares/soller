@@ -28,7 +28,11 @@ export default function Main() {
                 orci dui consequat turpis scelerisque.
               </p>
 
-              <Button button={{ text: 'Request a Quote', width: 'auto', color: 'purple' }} />
+              <Button 
+              text="Request a Quote" 
+              width="auto" 
+              color="purple" 
+            />
             </div>
 
             <div className={style.testimonial}>

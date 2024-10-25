@@ -20,7 +20,11 @@ export default function LastSection() {
           </div>
 
           <div className='flex flex-col gap-5'>
-            <Button button={{ text: 'Request a Quote', width: 'auto', color: 'yellow' }} />
+            <Button 
+              text="Request a Quote" 
+              width="auto" 
+              color="yellow" 
+            />
             <p>Egestas fringilla aliquam leo</p>
           </div>
         </div>

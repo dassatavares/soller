@@ -34,7 +34,11 @@ export default function Header() {
             555 818 282
           </span>
 
-          <Button button={{ text: 'Request a Quote', width: 'auto', color: 'purple' }} />
+          <Button 
+            text="Request a Quote" 
+            width="auto" 
+            color="purple" 
+           />
         </div>
       </header>
     </>

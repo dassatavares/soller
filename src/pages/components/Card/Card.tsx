@@ -94,7 +94,11 @@ export default function Card() {
         </div>
 
         <div className='flex flex-col gap-5'>
-          <Button button={{ text: 'Request a Quote', width: 'auto', color: 'yellow' }} />
+          <Button 
+            text="Request a Quote" 
+            width="auto" 
+            color="yellow" 
+           />
         </div>
       </div>
 
