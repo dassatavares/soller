@@ -1,0 +1,129 @@
+@import '../../../styles/variables';
+
+.services{
+  width: 100%;
+  height: auto;
+  display: flex;
+  @include padding(5rem);
+  color: $dark-color;
+  justify-content: center;
+  background-image: url('../../../../images/svg/shape_background_services.svg');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 30%;
+
+  .container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    .svg{
+      width: 30%;
+      height: auto;
+    }
+
+    .hero{
+      display: flex;
+      @include gap;
+      color: $dark-color;
+      flex-direction: column;
+      justify-content: flex-start;
+      
+      .header{
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+
+        h2 {
+          font-size: 1.25rem;
+          font-weight: 500;
+          line-height: 22px;
+          color: $secondary-color;
+        }
+  
+        h1 {
+          font-size: 3.5rem;
+          font-weight: 800;
+          line-height: 61.6px;
+          margin: 0 0 1rem 0;
+        }
+  
+        p{
+          font-size: 1rem;
+          line-height: normal;
+        }
+      }
+
+      .listItems{
+        display: flex;
+        @include gap;
+        flex-direction: column;
+
+        .row{
+          display: flex;
+          gap: 1rem;
+
+          .items{
+            width: 50%;
+
+            h3{
+              font-size: 1.5rem;
+              margin: 0 0 1rem 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    background-size: 80%;
+    background-position: bottom left;
+
+    .container{
+      gap: 5rem;
+      align-items: center;
+      flex-direction: column-reverse;
+
+      .hero{
+        flex-direction: column;
+
+        .header{
+          align-items: center;
+          
+          h1{
+            font-size: 2rem;
+            line-height: normal;
+            text-align: center;
+          }         
+    
+          h2 {
+            font-size: 1rem;
+          }
+          
+          p{
+            line-height: normal;
+            text-align: center;
+          }
+        }
+
+        .listItems{
+          .row{
+            .items{
+              h3{
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+
+      .svg{
+        width: 80%;
+        height: auto;
+        margin: 0 0 0 3rem;
+      }
+    }
+  }
+}

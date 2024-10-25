@@ -1,0 +1,75 @@
+@import '../../../styles/variables';
+
+.sectiontwo{
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 5rem;
+  @include padding(5rem);
+  flex-direction: column;
+  color: $dark-color;
+  background-image: url('../../../../images/svg/purple_circle_1.svg');
+  background-color: $primary-color;
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 700px;
+
+  .hero{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-evenly;
+    align-items: center;
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 22px;
+      color: $yellow-color;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 61.6px;
+      color: #fff;
+    }
+
+    p {
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 36px;
+      text-align: center;
+      color: #fff;
+    }
+  }
+
+  .image{
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (max-width: 768px) {
+    background-color: $purple-color;
+    background-position: bottom left;
+    background-image: url('../../../../images/svg/purple_circle_2.svg');
+    background-position-x: -70px;
+    background-size: 300px;
+    .hero{
+      flex-direction: column;
+
+      h1{
+        font-size: 2rem;
+        line-height: normal;
+      }
+
+      h2, p{
+        font-size: 1rem;
+      }
+
+      div{
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+}

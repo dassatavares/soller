@@ -1,0 +1,133 @@
+@import '../../../styles/variables';
+
+.features{
+  width: 100%;
+  height: auto;
+  display: flex;
+  @include padding(5rem);
+  color: $dark-color;
+  justify-content: center;
+  background-image: url('../../../../images/svg/shape_background_feature.svg');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 28%;
+
+  .container{
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+
+    .svg{
+      width: 30%;
+      height: auto;
+    }
+
+    .hero{
+      display: flex;
+      @include gap;
+      color: $dark-color;
+      flex-direction: column;
+      justify-content: flex-start;
+      
+      .header{
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+
+        h2 {
+          font-size: 1.25rem;
+          font-weight: 500;
+          line-height: 22px;
+          color: $secondary-color;
+        }
+  
+        h1 {
+          font-size: 3.5rem;
+          font-weight: 800;
+          line-height: 61.6px;
+          margin: 0 0 1rem 0;
+        }
+  
+        p {
+          font-size: 1.25rem;
+          font-weight: 400;
+          line-height: 36px;
+        }
+      }
+
+      .listItems{
+        display: flex;
+        @include gap;
+        flex-direction: column;
+
+        .row{
+          display: flex;
+          gap: 1rem;
+
+          .items{
+            width: 50%;
+
+            h3{
+              font-size: 1.5rem;
+              margin: 0 0 1rem 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    background-size: 90%;
+    background-position: bottom right;
+    margin: 0 0 3rem 0;
+
+    .container{
+      align-items: center;
+      flex-direction: column;
+      gap: 5rem;
+
+      .hero{
+        flex-direction: column;
+        
+        .header{
+          align-items: center;
+          
+          h1{
+            font-size: 2rem;
+            line-height: normal;
+            text-align: center;
+          }         
+
+          h2 {
+            font-size: 1rem;
+          }
+    
+          p{
+            font-size: 1rem;
+            line-height: normal;
+            text-align: center;
+          }
+        }
+
+        .listItems{
+          .row{
+            .items{
+              text-align: center;
+
+              h3{
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+
+      .svg{
+        width: 80%;
+        height: auto;
+        margin: 0 0 0 1rem;
+      }
+    }
+  }
+}

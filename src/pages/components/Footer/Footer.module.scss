@@ -1,0 +1,55 @@
+@import '../../../styles/variables';
+
+.footer {
+  width: 100%;
+  @include padding(2rem);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: $dark-color;
+  background-color: #fff;
+
+  .group{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    .copyright {
+      font-size: 1rem;
+    }
+  }
+
+  .links {
+
+    ul{
+      display: flex;
+      gap: 2rem;
+
+      li {
+        display: inline-flex;
+
+        a {
+          color: $dark-color;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 2rem;
+
+    .group{
+      flex-direction: column;
+
+      .copyright{
+        text-align: center;
+      }
+    }
+  }
+}

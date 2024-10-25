@@ -1,0 +1,68 @@
+@import '../../../styles/variables';
+
+// Mixins
+@mixin transition-effect($property, $time: 0.3s) {
+  transition: $property $time ease;
+}
+
+.ctaButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  background-color: transparent;
+  color: $purple-color;
+  padding: 1.2rem 2.5rem;
+  border-radius: 100px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  @include transition-effect(all);
+
+  &.purple {
+    color: $purple-color;
+    background-color: transparent;
+    border: 2px solid $purple-color;
+  
+    &:hover {
+      color: $yellow-color;
+      background-color: $purple-color;
+  
+      > .svg{
+        fill: $yellow-color;
+      }
+    }
+
+    svg{
+      fill: $purple-color;
+      @include transition-effect(all);
+    }
+  }
+  
+  &.yellow {
+    color: $yellow-color;
+    background-color: transparent;
+    border: 2px solid $yellow-color;
+  
+    &:hover {
+      color: $dark-orange-color;
+      background-color: $yellow-color;
+  
+      > .svg{
+        fill: $dark-orange-color;
+      }
+    }
+
+    svg{
+      fill: $yellow-color;
+      @include transition-effect(all);
+    }
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1.125rem;
+  }
+}

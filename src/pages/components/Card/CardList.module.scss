@@ -1,0 +1,45 @@
+@import '../../../styles/variables';
+
+.cards {
+  width: 100%;
+  min-height: 442px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  padding: 7rem 2rem 1rem 2rem;
+  
+  &.active{
+    padding: 10rem 2rem 4rem 2rem;
+    min-height: 520px;
+  }
+
+  .cardImage{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+
+    .image{
+      width: 64px;
+      height: 64px;
+      border-radius: 100px;
+      object-fit: cover;
+    }
+
+    .authorCompany{
+      color: #475569;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: calc(100vw - 2rem);
+    padding: 5rem 2rem 1rem 2rem;
+
+    &.active{
+      padding: 5rem 2rem 1rem 2rem;
+      min-height: 350px;
+    }
+  }
+}

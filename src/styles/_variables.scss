@@ -1,0 +1,47 @@
+// _variables.scss
+
+// Colors
+$primary-color: #7E22CE;
+$secondary-color: #D97706;
+$tertiary-color: #0369A1;
+
+$orange-color: #F59E0B;
+$dark-orange-color: #78350F;
+$yellow-color: #FCD34D;
+$purple-color: #581C87;
+$light-color: #fff;
+$dark-color: #0F172A;
+
+// Typography
+$font-size-large: 2.5rem;
+$font-size-medium: 1.125rem;
+$font-weight-bold: 700;
+$font-weight-regular: 400;
+
+// Layout
+$padding: 2rem;
+$border-radius: 50px;
+
+// Transition
+$transition-duration: 0.3s;
+
+// Mixins
+@mixin padding($height: 0, $width: 5rem){
+  padding: $height $width;
+
+  @media (max-width: 1440px) {
+    padding: $height 2rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: $height 1rem;
+  }
+}
+
+@mixin gap{
+  gap: 10rem;
+
+  @media (max-width: 768px) {
+    gap: 8rem;
+  }
+}

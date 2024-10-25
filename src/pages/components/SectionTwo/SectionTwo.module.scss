@@ -1,0 +1,112 @@
+@import '../../../styles/variables';
+
+.sectiontwo{
+  width: 100%;
+  height: auto;
+  display: flex;
+  @include padding(3rem);
+  flex-direction: column;
+  color: $dark-color;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../../../../images/svg/background_sectiontwo.svg');
+  background-size: cover;
+  background-position: center center;
+  
+  .svg{
+    position: relative;
+    z-index: 10;
+    margin: 5rem 0 0 0;
+  }
+
+  .hero{
+    display: flex;
+    text-align: center;
+    gap: 1rem;
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    z-index: 1;
+    
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 22px;
+      text-align: center;
+      color: $secondary-color;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 61.6px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 36px;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    background-size: 180%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+    .hero{
+      h1{
+        font-size: 2rem;
+        line-height: normal;
+        text-align: center;
+      }         
+
+      h2 {
+        font-size: 1rem;
+      }
+      
+      p{
+        font-size: 1rem;
+        line-height: normal;
+        text-align: center;
+      }
+    }
+  }
+}
+
+/* // Background Circle Code (another option instead a PGN background)
+$circle-size-large: 700px;
+$circle-size-small: 600px;
+
+.circleBackground {
+  position: relative;
+  width: 0;
+  height: 0;
+  width: 100vw;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+
+  @mixin circle($size, $color) {
+    width: $size;
+    height: $size;
+    background-color: $color;
+    border-radius: 50%;
+  }
+
+  .circleOrange {
+    position: relative;
+    @include circle($circle-size-large, $orange-color);
+    left: -180px;
+    bottom: 950px;
+  }
+
+  .circlePurple {
+    position: relative;
+    @include circle($circle-size-small, $primary-color);
+    right: -180px;
+    bottom: 810px;
+  }
+} */

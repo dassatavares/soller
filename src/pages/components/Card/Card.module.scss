@@ -1,0 +1,174 @@
+@import '../../../styles/variables';
+
+.card{
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 5rem;
+  @include padding(5rem);
+  flex-direction: column;
+  color: $dark-color;
+  background-color: $purple-color;
+  background-repeat: no-repeat;
+  background-position: right top;
+  overflow: hidden;
+
+  .hero{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 22px;
+      color: $yellow-color;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 61.6px;
+      color: #fff;
+    }
+
+    p {
+      font-size: 1.25rem;
+      line-height: 36px;
+      color: #fff;
+    }
+  }
+
+  .carrousel{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    
+    &.alignEnd {
+      align-items: flex-end !important; 
+    }
+
+    .slider{
+      width: 110%;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(1, 1fr);
+      align-items: center;
+      gap: 2rem;
+
+      @media (max-width: 1440px) {
+        width: 100%;
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      @media (max-width: 1280px) {
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media (max-width: 992px) {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: 768px) {
+        width: 100%;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0;
+      }
+    }
+
+    .sliderDots{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      ul{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        li{
+          width: 10px;
+          height: 10px;
+          background-color: #fff;
+          border-radius: 50%;
+
+          &.active{
+            width: 15px;
+            height: 15px;
+            background-color: $yellow-color;
+          }
+        }
+      }
+    }
+
+    .buttonContainer {
+      width: 100%;
+      display: flex;
+      gap: 2rem;
+
+      .circleButton {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        border: 2px solid $yellow-color; 
+        background-color: transparent;
+        color: $yellow-color;
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    
+        &:hover {
+          transform: scale(1.1); 
+        }
+    
+        &.left span {
+          transform: rotate(0deg); 
+        }
+    
+        &.right span {
+          transform: rotate(0deg); 
+        }
+      }
+    }
+  } 
+
+  @media (max-width: 768px) {
+    border-bottom: 1px solid #fff;
+    gap: 3rem;
+
+    .hero{
+      flex-direction: column;
+      gap: 2rem;
+
+      h2 {
+        font-size: 1rem;
+      }
+
+      p{
+        font-size: 1rem;
+        line-height: 26px;
+      }
+      
+      div{
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    .carrousel{
+      overflow: hidden;
+      
+      .buttonContainer{
+        padding: 1rem 0;
+        justify-content: center;
+      }
+    }
+  }
+}
