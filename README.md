@@ -5,5 +5,5 @@ Installing
 
 Project
 ===============
-Live Project - https://soller-three.vercel.app/
+Live Project - https://soller-three.vercel.app/ <br />
 Video Link - https://streamable.com/dot1aj
