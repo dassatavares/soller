@@ -29,10 +29,10 @@ export default function Main() {
               </p>
 
               <Button 
-              text="Request a Quote" 
-              width="auto" 
-              color="purple" 
-            />
+                text="Request a Quote" 
+                width="auto" 
+                color="purple" 
+              />
             </div>
 
             <div className={style.testimonial}>
